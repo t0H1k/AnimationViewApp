@@ -14,8 +14,8 @@
 		8E30BE342911121F00301D9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E30BE332911121F00301D9F /* Assets.xcassets */; };
 		8E30BE372911121F00301D9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E30BE352911121F00301D9F /* LaunchScreen.storyboard */; };
 		8E30BE402911128600301D9F /* SpringAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = 8E30BE3F2911128600301D9F /* SpringAnimation */; };
-		8E30BE42291115DE00301D9F /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30BE41291115DE00301D9F /* Data.swift */; };
-		8E30BE4A291243D800301D9F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30BE49291243D800301D9F /* Model.swift */; };
+		8E30BE42291115DE00301D9F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30BE41291115DE00301D9F /* DataManager.swift */; };
+		8E30BE4A291243D800301D9F /* AnimationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30BE49291243D800301D9F /* AnimationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +27,8 @@
 		8E30BE332911121F00301D9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E30BE362911121F00301D9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E30BE382911121F00301D9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8E30BE41291115DE00301D9F /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		8E30BE49291243D800301D9F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		8E30BE41291115DE00301D9F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		8E30BE49291243D800301D9F /* AnimationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,17 +62,57 @@
 		8E30BE292911121C00301D9F /* AnimationViewApp */ = {
 			isa = PBXGroup;
 			children = (
-				8E30BE2A2911121C00301D9F /* AppDelegate.swift */,
-				8E30BE2C2911121C00301D9F /* SceneDelegate.swift */,
-				8E30BE2E2911121C00301D9F /* ViewController.swift */,
-				8E30BE41291115DE00301D9F /* Data.swift */,
-				8E30BE49291243D800301D9F /* Model.swift */,
-				8E30BE302911121C00301D9F /* Main.storyboard */,
+				8E30BE4F291301E900301D9F /* App */,
+				8E30BE502913021200301D9F /* ViewControllers */,
+				8E30BE512913021E00301D9F /* Data */,
+				8E30BE522913022B00301D9F /* Model */,
+				8E30BE532913023400301D9F /* Storyboards */,
 				8E30BE332911121F00301D9F /* Assets.xcassets */,
-				8E30BE352911121F00301D9F /* LaunchScreen.storyboard */,
-				8E30BE382911121F00301D9F /* Info.plist */,
 			);
 			path = AnimationViewApp;
+			sourceTree = "<group>";
+		};
+		8E30BE4F291301E900301D9F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8E30BE2A2911121C00301D9F /* AppDelegate.swift */,
+				8E30BE2C2911121C00301D9F /* SceneDelegate.swift */,
+				8E30BE382911121F00301D9F /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8E30BE502913021200301D9F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8E30BE2E2911121C00301D9F /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8E30BE512913021E00301D9F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8E30BE41291115DE00301D9F /* DataManager.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8E30BE522913022B00301D9F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E30BE49291243D800301D9F /* AnimationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E30BE532913023400301D9F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8E30BE302911121C00301D9F /* Main.storyboard */,
+				8E30BE352911121F00301D9F /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,11 +192,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E30BE4A291243D800301D9F /* Model.swift in Sources */,
+				8E30BE4A291243D800301D9F /* AnimationModel.swift in Sources */,
 				8E30BE2F2911121C00301D9F /* ViewController.swift in Sources */,
 				8E30BE2B2911121C00301D9F /* AppDelegate.swift in Sources */,
 				8E30BE2D2911121C00301D9F /* SceneDelegate.swift in Sources */,
-				8E30BE42291115DE00301D9F /* Data.swift in Sources */,
+				8E30BE42291115DE00301D9F /* DataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +345,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3UZQ4AV9X8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AnimationViewApp/Info.plist;
+				INFOPLIST_FILE = AnimationViewApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -318,9 +358,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = AntonBoev.AnimationViewApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -333,7 +376,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3UZQ4AV9X8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AnimationViewApp/Info.plist;
+				INFOPLIST_FILE = AnimationViewApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -346,9 +389,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = AntonBoev.AnimationViewApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

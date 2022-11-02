@@ -1,5 +1,5 @@
 //
-//  Data.swift
+//  DataManager.swift
 //  AnimationViewApp
 //
 //  Created by Anton Boev on 01.11.2022.
