@@ -1,5 +1,5 @@
 //
-//  DataManager.swift
+//  DataStore.swift
 //  AnimationViewApp
 //
 //  Created by Anton Boev on 01.11.2022.
@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct AnimationNames {
+class DataStore {
     
-    static let shared = AnimationNames()
+    static let shared = DataStore()
     
     let animationsNames = [
         "pop",

@@ -16,8 +16,8 @@ struct Animation {
     
     static func randomAnimation() -> Animation {
         Animation(
-            animationsNames: AnimationNames.shared.animationsNames.randomElement()?.description ?? "",
-            curveNames: AnimationNames.shared.curvesNames.randomElement()?.description ?? "",
+            animationsNames: DataStore.shared.animationsNames.randomElement()?.description ?? "",
+            curveNames: DataStore.shared.curvesNames.randomElement()?.description ?? "",
             forceCount: Double.random(in: 0.5...1.3),
             durationCount: Double.random(in: 1...1.5),
             delayCount: Double.random(in: 0...0.3)

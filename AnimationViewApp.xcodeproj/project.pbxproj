@@ -14,7 +14,7 @@
 		8E30BE342911121F00301D9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E30BE332911121F00301D9F /* Assets.xcassets */; };
 		8E30BE372911121F00301D9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E30BE352911121F00301D9F /* LaunchScreen.storyboard */; };
 		8E30BE402911128600301D9F /* SpringAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = 8E30BE3F2911128600301D9F /* SpringAnimation */; };
-		8E30BE42291115DE00301D9F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30BE41291115DE00301D9F /* DataManager.swift */; };
+		8E30BE42291115DE00301D9F /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30BE41291115DE00301D9F /* DataStore.swift */; };
 		8E30BE4A291243D800301D9F /* AnimationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30BE49291243D800301D9F /* AnimationModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +27,7 @@
 		8E30BE332911121F00301D9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E30BE362911121F00301D9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E30BE382911121F00301D9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8E30BE41291115DE00301D9F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		8E30BE41291115DE00301D9F /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		8E30BE49291243D800301D9F /* AnimationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,7 +64,7 @@
 			children = (
 				8E30BE4F291301E900301D9F /* App */,
 				8E30BE502913021200301D9F /* ViewControllers */,
-				8E30BE512913021E00301D9F /* Data */,
+				8E30BE512913021E00301D9F /* Sevices */,
 				8E30BE522913022B00301D9F /* Model */,
 				8E30BE532913023400301D9F /* Storyboards */,
 				8E30BE332911121F00301D9F /* Assets.xcassets */,
@@ -90,12 +90,12 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		8E30BE512913021E00301D9F /* Data */ = {
+		8E30BE512913021E00301D9F /* Sevices */ = {
 			isa = PBXGroup;
 			children = (
-				8E30BE41291115DE00301D9F /* DataManager.swift */,
+				8E30BE41291115DE00301D9F /* DataStore.swift */,
 			);
-			path = Data;
+			path = Sevices;
 			sourceTree = "<group>";
 		};
 		8E30BE522913022B00301D9F /* Model */ = {
@@ -196,7 +196,7 @@
 				8E30BE2F2911121C00301D9F /* ViewController.swift in Sources */,
 				8E30BE2B2911121C00301D9F /* AppDelegate.swift in Sources */,
 				8E30BE2D2911121C00301D9F /* SceneDelegate.swift in Sources */,
-				8E30BE42291115DE00301D9F /* DataManager.swift in Sources */,
+				8E30BE42291115DE00301D9F /* DataStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
