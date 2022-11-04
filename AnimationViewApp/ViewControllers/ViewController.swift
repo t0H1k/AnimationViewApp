@@ -10,58 +10,29 @@ import SpringAnimation
 
 class ViewController: UIViewController {
 
+    // MARK: - IB Outlets
     @IBOutlet var animatedView: SpringView!
-    @IBOutlet var animationButton: UIButton!
-    
-    @IBOutlet var animationNameLabel: UILabel! {
+    @IBOutlet var animationLabel: UILabel! {
         didSet {
-            animationNameLabel.text = "Animated: \(animation.animationsNames.description)"
+            animationLabel.text = animation.description
         }
     }
     
-    @IBOutlet var curveLabel: UILabel! {
-        didSet {
-            curveLabel.text = "Curve: \(animation.curveNames.description)"
-        }
-    }
+    // MARK: - Private properties
+    private var animation = Animation.getRandomAnimation()
     
-    @IBOutlet var forceLabel: UILabel! {
-        didSet {
-            forceLabel.text = "Force: \(String(format: "%.2f", animation.forceCount))"
-        }
-    }
-    
-    @IBOutlet var durationLabel: UILabel! {
-        didSet {
-            durationLabel.text = "Duration: \(String(format: "%.2f", animation.durationCount))"
-        }
-    }
-    
-    @IBOutlet var delayLabel: UILabel! {
-        didSet {
-            delayLabel.text = "Delay: \(String(format: "%.2f", animation.delayCount))"
-        }
-    }
-    
-    private var animation = Animation.randomAnimation()
-    
+    // MARK: - IB Actions
     @IBAction func runButtonDidTapped(_ sender: UIButton) {
+        animationLabel.text = animation.description
         
-        animationNameLabel.text = "Animated: \(animation.animationsNames.description)"
-        curveLabel.text = "Curve: \(animation.curveNames.description)"
-        forceLabel.text = "Force: \(String(format: "%.2f", animation.forceCount))"
-        durationLabel.text = "Duration: \(String(format: "%.2f", animation.durationCount))"
-        delayLabel.text = "Delay: \(String(format: "%.2f", animation.delayCount))"
-        
-        animatedView.animation = animation.animationsNames
-        animatedView.curve = animation.curveNames
-        animatedView.force = CGFloat(Float.random(in: 0.5...1.0))
-        animatedView.duration = CGFloat(Float.random(in: 0.5...1.0))
-        animatedView.delay = CGFloat(Float.random(in: 0.3...0.5))
+        animatedView.animation = animation.name
+        animatedView.curve = animation.curve
+        animatedView.force = animation.force
+        animatedView.duration = animation.duration
+        animatedView.delay = animation.delay
         animatedView.animate()
         
-        animation = Animation.randomAnimation()
-        
-        sender.setTitle("Run \(String(describing: animation.animationsNames.description ))", for: .normal)
+        animation = Animation.getRandomAnimation()
+        sender.setTitle("Run \(String(describing: animation.name ))", for: .normal)
     }
 }
